@@ -1,0 +1,19 @@
+# fly.toml
+app = "نام-اپلیکیشن-شما"   # اینجا نام یکتایی برای اپ خود بگذارید (مثلاً my-card-bot)
+
+kill_signal = "SIGINT"
+kill_timeout = 5
+primary_region = "ams"      # می‌توانید منطقه دلخواه را انتخاب کنید (مثلاً fra, iad, sin)
+
+[build]
+  # اگر Dockerfile در مسیر اصلی است، نیازی به تنظیم خاصی نیست
+  # می‌توانید از dockerfile = "Dockerfile" استفاده کنید (پیش‌فرض)
+
+[env]
+  # متغیرهای محیطی عمومی (در صورت نیاز)
+  # بهتر است توکن را از secrets بگذارید نه اینجا
+  # SUPERGROUP_ID = "..."   (اگر می‌خواهید عمومی نباشد، از secrets استفاده کنید)
+
+[experimental]
+  auto_rollback = true
+  # enable_consul = false
